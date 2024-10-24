@@ -6,6 +6,8 @@ import psutil
 import time
 import datetime
 
+
+
 def lookup(hostname):
     if(re.search("[a-z]+\.+[a-z]",hostname)):
         return socket.gethostbyname(hostname)
@@ -64,6 +66,7 @@ match(Arg1):
 
 
 pathFolder = os.path.join(os.getenv('localappdata'), "Temp", "network_tp3")
+
 if not os.path.exists(pathFolder):
     os.makedirs(pathFolder)
     print("dossier crééée : "+pathFolder)
